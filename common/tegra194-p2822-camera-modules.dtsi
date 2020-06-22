@@ -383,6 +383,106 @@
 					pcl_id = "v4l2_lens";
 				};
 			};
+			cam_module6: module6 {
+				status = "disabled";
+				cam_module6_drivernode0: drivernode0 {
+					status = "disabled";
+				};
+				cam_module6_drivernode1: drivernode1 {
+					status = "disabled";
+					pcl_id = "v4l2_lens";
+				};
+			};
+			cam_module7: module7 {
+				status = "disabled";
+				cam_module7_drivernode0: drivernode0 {
+					status = "disabled";
+				};
+				cam_module7_drivernode1: drivernode1 {
+					status = "disabled";
+					pcl_id = "v4l2_lens";
+				};
+			};
+			cam_module8: module8 {
+				status = "disabled";
+				cam_module8_drivernode0: drivernode0 {
+					status = "disabled";
+				};
+				cam_module8_drivernode1: drivernode1 {
+					status = "disabled";
+					pcl_id = "v4l2_lens";
+				};
+			};
+			cam_module9: module9 {
+				status = "disabled";
+				cam_module9_drivernode0: drivernode0 {
+					status = "disabled";
+				};
+				cam_module9_drivernode1: drivernode1 {
+					status = "disabled";
+					pcl_id = "v4l2_lens";
+				};
+			};
+			cam_module10: module10 {
+				status = "disabled";
+				cam_module10_drivernode0: drivernode0 {
+					status = "disabled";
+				};
+				cam_module10_drivernode1: drivernode1 {
+					status = "disabled";
+					pcl_id = "v4l2_lens";
+				};
+			};
+			cam_module11: module11 {
+				status = "disabled";
+				cam_module11_drivernode0: drivernode0 {
+					status = "disabled";
+				};
+				cam_module11_drivernode1: drivernode1 {
+					status = "disabled";
+					pcl_id = "v4l2_lens";
+				};
+			};
+			cam_module12: module12 {
+				status = "disabled";
+				cam_module12_drivernode0: drivernode0 {
+					status = "disabled";
+				};
+				cam_module12_drivernode1: drivernode1 {
+					status = "disabled";
+					pcl_id = "v4l2_lens";
+				};
+			};
+			cam_module13: module13 {
+				status = "disabled";
+				cam_module13_drivernode0: drivernode0 {
+					status = "disabled";
+				};
+				cam_module13_drivernode1: drivernode1 {
+					status = "disabled";
+					pcl_id = "v4l2_lens";
+				};
+			};
+			cam_module14: module14 {
+				status = "disabled";
+				cam_module14_drivernode0: drivernode0 {
+					status = "disabled";
+				};
+				cam_module14_drivernode1: drivernode1 {
+					status = "disabled";
+					pcl_id = "v4l2_lens";
+				};
+			};
+			cam_module15: module15 {
+				status = "disabled";
+				cam_module15_drivernode0: drivernode0 {
+					status = "disabled";
+				};
+				cam_module15_drivernode1: drivernode1 {
+					status = "disabled";
+					pcl_id = "v4l2_lens";
+				};
+			};
 		};
 	};
 };
