@@ -62,6 +62,11 @@
 	};
 
 	gpio@c2f0000 {
+		/* gpio-name for 40-pin header, gpio-name given as COL(10) x ROW(20) */
+		gpio-line-names = "CAN1_DOUT",   "CAN1_DIN",     "CAN0_DOUT",     "CAN0_DIN",     "",     "",     "",     "",     "GPIO8",     "GPIO9",
+		"",     "",     "",    "",    "",     "",     "",    "",    "",     "",
+		"",     "",     "",     "I2C2_CLK",     "I2C2_DAT",     "",     "",     "",     "",     "";
+
 		pex-refclk-sel-low {
 			gpio-hog;
 			output-low;
@@ -80,20 +85,33 @@
 	};
 
 	gpio@2200000 {
-		pcie-reg-enable {
-			gpio-hog;
-			gpios = <TEGRA194_MAIN_GPIO(Z, 2) GPIO_ACTIVE_HIGH
-				 TEGRA194_MAIN_GPIO(A, 1) GPIO_ACTIVE_LOW>;
-			label = "pcie-3v3-reg", "pcie-12v-reg";
-			output-high;
-			status = "okay";
-		};
+		/* gpio-name for 40-pin header, gpio-name given as COL(10) x ROW(20) */
+		gpio-line-names = "",   "",     "",     "",     "",     "",     "",     "",     "",     "",
+		"",     "",     "",    "",    "",     "",     "",    "",    "",     "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",     "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",      "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",     "",
+		"",    "",    "",     "",     "",     "",     "GPIO35",     "",     "",     "",
+		"",     "",     "",     "I2S2_CLK",     "I2S2_DOUT",     "I2S2_DIN",     "I2S2_FS",     "",     "",     "",
+		"",     "",     "",     "",     "",     "",     "",    "",    "",   "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",     "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",     "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",     "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",     "",
+		"",     "",     "",     "",     "GPIO32",     "",     "",     "",     "",     "GPIO17",
+		"",     "",     "",     "",     "MCLK05",     "",     "",     "",     "UART1_TX",     "UART1_RX",
+		"UART1_RTS",     "UART1_CTS",     "",     "",     "",     "",     "",     "",     "",     "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",     "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",   "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",   "",
+		"",     "",     "",     "",     "",     "",     "",     "",     "",   "",
+		"",     "",     "",     "",     "",     "SPI3_CS0_N",     "",     "",     "",   "",
+		"",     "",     "",     "SPI1_CLK",     "SPI1_MISO",     "SPI1_MOSI",     "SPI1_CS0_N",     "SPI1_CS1_N",     "",     "";
 	};
 
 	pcie@14180000 {
 		status = "okay";
 
-		vddio-pex-ctl-supply = <&p2888_spmic_sd3>;
 		nvidia,disable-aspm-states = <0xf>;
 		nvidia,enable-power-down;
 		nvidia,disable-clock-request;
@@ -108,7 +126,6 @@
 	pcie@14100000 {
 		status = "okay";
 
-		vddio-pex-ctl-supply = <&p2888_spmic_sd3>;
 		nvidia,disable-aspm-states = <0xc>;
 		nvidia,enable-power-down;
 		nvidia,disable-clock-request;
@@ -124,7 +141,6 @@
 
 		nvidia,pex-wake = <&tegra_main_gpio TEGRA194_MAIN_GPIO(L, 2)
 					GPIO_ACTIVE_HIGH>;
-		vddio-pex-ctl-supply = <&p2888_spmic_sd3>;
 		nvidia,disable-aspm-states = <0xf>;
 		nvidia,enable-power-down;
 		nvidia,disable-clock-request;
@@ -136,14 +152,12 @@
 	pcie@141a0000 {
 		status = "disabled";
 
-		vddio-pex-ctl-supply = <&p2888_spmic_sd3>;
 		nvidia,disable-aspm-states = <0xf>;
 		nvidia,enable-power-down;
 		nvidia,disable-clock-request;
 
 		nvidia,plat-gpios =
-			<&tegra_main_gpio TEGRA194_MAIN_GPIO(Z, 2) GPIO_ACTIVE_HIGH    /* 3V3 */
-			 &tegra_main_gpio TEGRA194_MAIN_GPIO(A, 1) GPIO_ACTIVE_LOW     /* 12V */
+			<
 		       /*&tegra_main_gpio TEGRA194_MAIN_GPIO(Y, 4) GPIO_ACTIVE_HIGH */ /* I2C */
 			>;
 
@@ -164,8 +178,6 @@
 		status = "disabled";
 
 		nvidia,disable-aspm-states = <0xf>;
-
-		vddio-pex-ctl-supply = <&p2888_spmic_sd3>;
 
 		phys = <&p2u_12>, <&p2u_13>, <&p2u_14>, <&p2u_15>,
 			<&p2u_16>, <&p2u_17>, <&p2u_18>, <&p2u_19>;

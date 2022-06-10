@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2019, NVIDIA CORPORATION.  All rights reserved.
+ * Copyright (c) 2016-2020, NVIDIA CORPORATION.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,6 +20,7 @@
 #include "tegra194-p2822-0000-camera-imx274-a00.dtsi"
 #include "tegra194-p2822-0000-camera-imx185-a00.dtsi"
 #include "tegra194-p2822-0000-camera-imx390-a00.dtsi"
+#include "tegra194-e2832-hdmi.dtsi"
 #include "tegra194-p2822-0000-camera-vivid.dtsi"
 
 #define CAM0_RST_L	TEGRA194_MAIN_GPIO(H, 3)
@@ -236,6 +237,9 @@
 		e3326_cam0: ov5693_c@36 {
 			status = "disabled";
 		};
+		e2832_cam0: e2832@2b {
+			status = "disabled";
+		};
 		tca6408@21 {
 			status = "disabled";
 		};
@@ -379,106 +383,6 @@
 					status = "disabled";
 				};
 				cam_module5_drivernode1: drivernode1 {
-					status = "disabled";
-					pcl_id = "v4l2_lens";
-				};
-			};
-			cam_module6: module6 {
-				status = "disabled";
-				cam_module6_drivernode0: drivernode0 {
-					status = "disabled";
-				};
-				cam_module6_drivernode1: drivernode1 {
-					status = "disabled";
-					pcl_id = "v4l2_lens";
-				};
-			};
-			cam_module7: module7 {
-				status = "disabled";
-				cam_module7_drivernode0: drivernode0 {
-					status = "disabled";
-				};
-				cam_module7_drivernode1: drivernode1 {
-					status = "disabled";
-					pcl_id = "v4l2_lens";
-				};
-			};
-			cam_module8: module8 {
-				status = "disabled";
-				cam_module8_drivernode0: drivernode0 {
-					status = "disabled";
-				};
-				cam_module8_drivernode1: drivernode1 {
-					status = "disabled";
-					pcl_id = "v4l2_lens";
-				};
-			};
-			cam_module9: module9 {
-				status = "disabled";
-				cam_module9_drivernode0: drivernode0 {
-					status = "disabled";
-				};
-				cam_module9_drivernode1: drivernode1 {
-					status = "disabled";
-					pcl_id = "v4l2_lens";
-				};
-			};
-			cam_module10: module10 {
-				status = "disabled";
-				cam_module10_drivernode0: drivernode0 {
-					status = "disabled";
-				};
-				cam_module10_drivernode1: drivernode1 {
-					status = "disabled";
-					pcl_id = "v4l2_lens";
-				};
-			};
-			cam_module11: module11 {
-				status = "disabled";
-				cam_module11_drivernode0: drivernode0 {
-					status = "disabled";
-				};
-				cam_module11_drivernode1: drivernode1 {
-					status = "disabled";
-					pcl_id = "v4l2_lens";
-				};
-			};
-			cam_module12: module12 {
-				status = "disabled";
-				cam_module12_drivernode0: drivernode0 {
-					status = "disabled";
-				};
-				cam_module12_drivernode1: drivernode1 {
-					status = "disabled";
-					pcl_id = "v4l2_lens";
-				};
-			};
-			cam_module13: module13 {
-				status = "disabled";
-				cam_module13_drivernode0: drivernode0 {
-					status = "disabled";
-				};
-				cam_module13_drivernode1: drivernode1 {
-					status = "disabled";
-					pcl_id = "v4l2_lens";
-				};
-			};
-			cam_module14: module14 {
-				status = "disabled";
-				cam_module14_drivernode0: drivernode0 {
-					status = "disabled";
-				};
-				cam_module14_drivernode1: drivernode1 {
-					status = "disabled";
-					pcl_id = "v4l2_lens";
-				};
-			};
-			cam_module15: module15 {
-				status = "disabled";
-				cam_module15_drivernode0: drivernode0 {
-					status = "disabled";
-				};
-				cam_module15_drivernode1: drivernode1 {
 					status = "disabled";
 					pcl_id = "v4l2_lens";
 				};
